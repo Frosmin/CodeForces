@@ -1,24 +1,20 @@
-
-def aprobados(n, k, scores):
+def aprobados(n, nota, scores):
     res = 0
-    
     for i in range(0, n):
-        if aproved(scores[i],k):
+        
+        
+        if aproved(scores[i],nota):
             res +=1
         else:
             pass
     return res
-
+    
+    
 def aproved(num,k):
-    if num > k:
+    if num >= k and num > 0:
         return True
     else:
         return False
-
-
-
-
-
 
 
 
@@ -31,7 +27,10 @@ def main():
             raise ValueError("error")
         
         scores = list(map(int, input().strip().split()))
-        print(aprobados(n, k, scores))
+        
+        nota = scores[k-1]
+        
+        print(aprobados(n, nota, scores))
         
     except ValueError as e:
         print(f"Error: {e}")
@@ -39,4 +38,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-    
