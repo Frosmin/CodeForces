@@ -4,9 +4,6 @@ class long:
     
     def fin(word):
         return word[-1]
-    
-    def tam(word):
-     return len(word)
 
     def resum(num, word):
         if num == len(word):
