@@ -14,6 +14,7 @@ def dragones(fuerza, n):
             fuerza += tupla[i][1]
         else:
             return False
+    return True
     
 
 if dragones(fuerza, n):
