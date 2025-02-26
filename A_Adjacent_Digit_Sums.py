@@ -12,12 +12,12 @@ def multiplo_nueve(numero):
 
 def resultado(x,y):
     if y > x + 1:
-        return "NO"
+        return "No"
     diferencia = y - x
     if (diferencia - 1) % (-9) == 0 and diferencia <= 1:
-        return "YES"
+        return "Yes"
     else:
-        return "NO"
+        return "No"
 
 
 n = int(input())
