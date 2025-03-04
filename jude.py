@@ -10,110 +10,107 @@ def tipo(carta):
         return 4
     else:
         return 0
+    
+def convertir_mazo(mazo):
+    nuevo_mazo = []
+    for carta in mazo:
+        nuevo_mazo.append(tipo(carta))
+    return nuevo_mazo
+
+def buscar_figura(mazo, n):
+    for i in range(n):
+        if mazo[i] != 0:
+            return mazo[i], mazo
+
+
+
+
 
 def jugar(jugador1, jugador2):
     mesa = []
-    ultimo_jugador_figura = None
-    
-    
-    turno_jugador2 = True
-    
+    turno = 2
+    figura = 0
     while len(jugador1) > 0 and len(jugador2) > 0:
-        
-        if turno_jugador2:
-            jugador = jugador2
-            nombre_jugador = "jugador2"
-        else:
-            jugador = jugador1
-            nombre_jugador = "jugador1"
-        
-        
-        if len(jugador) == 0:
-            break
-            
-        
-        carta = jugador.pop(0)
-        mesa.append(carta)
-        
-        
-        valor = tipo(carta)
-        
-        if valor > 0:  
-            
-            ultimo_jugador_figura = nombre_jugador
-            
-           
-            turno_jugador2 = not turno_jugador2
-            
-           
-            cartas_a_cubrir = valor
-            figura_cubierta = False
-            
-            
-            if turno_jugador2:
-                jugador_cubre = jugador2
-            else:
-                jugador_cubre = jugador1
-                
-            for _ in range(cartas_a_cubrir):
-                if len(jugador_cubre) == 0:
-                    break  
-                    
-                carta_respuesta = jugador_cubre.pop(0)
-                mesa.append(carta_respuesta)
-                
-                
-                if tipo(carta_respuesta) > 0:
-                    figura_cubierta = True
-                    if turno_jugador2:
-                        ultimo_jugador_figura = "jugador2"
+        if turno == 2:
+            if figura != 0:
+                for i in range(figura):
+                    if jugador2[i] != 0:
+                        figura = jugador2[i]
+                        mesa.append(jugador2.pop(0))
+                        i -= 1
+                        figura -= 1
+                        turno = 1
+                        break
                     else:
-                        ultimo_jugador_figura = "jugador1"
-                    break
-            
-            
-            if not figura_cubierta:
-                if ultimo_jugador_figura == "jugador1":
-                    jugador1.extend(mesa)
+                        mesa.append(jugador2.pop(0))
+                    turno = 1
+            else:
+                carta_jugador2 = jugador2[0]
+                if carta_jugador2 == 0:
+                    mesa.append(jugador2.pop(0)) #mueve la carta a la mesa
+                    turno = 1
                 else:
-                    jugador2.extend(mesa)
-                mesa = []
-                
-                
-                turno_jugador2 = (ultimo_jugador_figura == "jugador2")
+                    figura = jugador2[0]
+                    mesa.append(jugador2.pop(0))
+                    turno = 1
         else:
-          
-            turno_jugador2 = not turno_jugador2
-    
-    # Determinar el ganador
-    if len(jugador1) == 0:
-        return "2" + str(len(jugador2)).rjust(3)
-    else:
-        return "1" + str(len(jugador1)).rjust(3)
+            if figura != 0:
+                if figura <= len(jugador1):
+                    for i in range(figura):
+                        if jugador1[i] != 0:
+                            figura = jugador1[i]
+                            mesa.append(jugador1.pop(0))
+                            i -= 1
+                            figura -= 1
+                            turno = 2
+                            break
+                        else:
+                            mesa.append(jugador1.pop(0))
+                        turno = 2
+                else:
+                    print('Jugador 2 gana')
+                    break
+            else:   
+                carta_jugador1 = jugador1[0]
+                if carta_jugador1 == 0:
+                    mesa.append(jugador1.pop(0)) #mueve la carta a la mesa
+                    turno = 2
+                else:
+                    figura = jugador1[0]
+                    turno = 2
+    print("mesa--------------------")
+    print(mesa) 
+    print("jugadores----------------")           
+    print(jugador1)
+    print(jugador2)
+                
+                
+                    
+            
+            
+            
+
+
+
 
 if __name__ == '__main__':
-    while True:
-        linea = input()
-        if linea == '#':
-            break
-            
-        mazo = []
-        mazo.extend(linea.split())
+    mazo = list(map(str, input().split()))
+    mazo_numeros = convertir_mazo(mazo)
+    
+   
+   
+    jugador1 = []
+    jugador2 = []    
         
-       
-        for _ in range(3):
-            linea_adicional = input()
-            mazo.extend(linea_adicional.split())
-        
-        
-        jugador1 = []  
-        jugador2 = []  
-        
-        for i in range(52):
-            if i % 2 == 0:
-                jugador2.append(mazo[i])
-            else:
-                jugador1.append(mazo[i])
-        
-        resultado = jugar(jugador1, jugador2)
-        print(resultado)
+    for i in range(52):
+        if i % 2 == 0:
+                jugador2.append(mazo_numeros[i])
+        else:
+                jugador1.append(mazo_numeros[i])
+    # print(mazo)
+    # print(mazo_numeros)
+    # print(jugador1)
+    # print(jugador2)
+    jugar(jugador1, jugador2)
+    
+# HA H3 H4 CA SK S5 C5 S6 C4 D5 H7 HJ HQ D4 D7 SJ DT H6 S9 CT HK C8 C9 D6 CJ C6 S8 D8 C2 S2 S3 C7 H5 DJ S4 DQ DK D9 D3 H9 DA SA CK CQ C3 HT SQ H8 S7 ST H2 D2
