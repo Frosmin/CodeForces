@@ -30,6 +30,7 @@ def jugar(jugador1, jugador2):
     mesa = []
     turno = 2
     figura = 0
+    tomar = None
     while len(jugador1) > 0 and len(jugador2) > 0:
         if turno == 2:
             if figura != 0:
@@ -44,6 +45,7 @@ def jugar(jugador1, jugador2):
                     else:
                         mesa.append(jugador2.pop(0))
                     turno = 1
+                    figura = 0
             else:
                 carta_jugador2 = jugador2[0]
                 if carta_jugador2 == 0:
@@ -67,6 +69,7 @@ def jugar(jugador1, jugador2):
                         else:
                             mesa.append(jugador1.pop(0))
                         turno = 2
+                        figura = 0
                 else:
                     print('Jugador 2 gana')
                     break
@@ -84,8 +87,7 @@ def jugar(jugador1, jugador2):
     print(jugador1)
     print(jugador2)
                 
-                
-                    
+
             
             
             
