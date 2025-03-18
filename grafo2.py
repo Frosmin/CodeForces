@@ -47,11 +47,13 @@ def crear_grafo(n, aristas, dirigido=False):
 # Ejemplo de uso
 if __name__ == "__main__":
     n = 4  # número de vértices (0, 1, 2, 3)
-    
     # Lista de aristas (u, v)
     aristas = [(0, 1), (0, 2), (1, 2)]
-    
     grafo = crear_grafo(n, aristas)
+    
+    
+    
+    
     print("Grafo no dirigido:")
     for i in range(n):
         print(f"{i}: {grafo[i]}")
