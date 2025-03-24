@@ -14,23 +14,25 @@ def quitar_letra(l, s):
 #     print('Yes')
 # else:
 #     print('No')
-s =list(map(str, input()))
-res = 0
-for char in s:
-    if char == 'A':
-        res += 1
-        break
-for char in s:
-    if char == 'B':
-        res += 1
-        break
-for char in s:
-    if char == 'C':
-        res += 1
-        break
-if res == 3:
-    print('Yes')
-else:
-    print('No')
+# s =list(map(str, input()))
+# res = 0
+# for char in s:
+#     if char == 'A':
+#         res += 1
+#         break
+# for char in s:
+#     if char == 'B':
+#         res += 1
+#         break
+# for char in s:
+#     if char == 'C':
+#         res += 1
+#         break
+# if res == 3:
+#     print('Yes')
+# else:
+#     print('No')
  
+ 
+print("Yes" if set(input()) == {"A","B","C"} else "No")
 
