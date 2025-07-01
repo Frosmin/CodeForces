@@ -1,5 +1,5 @@
 def paridad(num):
-    return num % 2 == 0
+    return num % 2 == 0  #true si es par
 
 def paridad_lista(lista):
     par = 0
@@ -9,16 +9,17 @@ def paridad_lista(lista):
             par += 1
         else:
             impar += 1
-    return par < impar # true si hay más impares que pares
+    return par > impar # true si hay mas pares que impares
 
 
 n = int(input())
 lista = list(map(int, input().split()))
-if paridad_lista(lista):
-    for i in lista:
-        if paridad(i):
-            print(i)
+if paridad_lista(lista) == True: #mas pares
+    for i in range(n):
+        if paridad(lista[i]) == False:
+            print(i+1)
 else:
-    for i in lista:
-        if paridad(i) == False:
-            print(i)
+    # mas impares
+    for i in range(n):
+        if paridad(lista[i]) == True:
+            print(i+1)
