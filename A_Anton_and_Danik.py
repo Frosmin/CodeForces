@@ -1,0 +1,5 @@
+n = int(input())
+lista = list(map(str,input()))
+A = lista.count('A')
+D = lista.count('D')
+print("Friendship" if A == D else "Anton" if A > D else "Danik")
