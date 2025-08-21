@@ -7,8 +7,11 @@ def espacios(amigo,h):
 
 
 n,h = map(int, input().split())
-amigos = list(map(int, input().split()))
+amigos = list(map(int, input().split()[:n]))
 res = 0
 for amigo in amigos:
-    res += espacios(amigo,h) 
+    if amigo > h:
+        res += 2
+    else:
+        res +=1
 print(res)
