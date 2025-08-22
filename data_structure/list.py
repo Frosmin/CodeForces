@@ -23,3 +23,9 @@ print(list(range(10))) #del 0 al 9 dentro de una lista
 
 lista_cuadrados = [i**2 for i in range(10)]
 print(lista_cuadrados)
+
+n= 2
+nueva_lista = [i for i in range(1,n+1)]
+
+
+print(nueva_lista)
