@@ -16,9 +16,6 @@
 
 n = int(input())
 posiciciones = list(map(int,input().split()[:n]))
-
-# nueva_lista = [i for i in range(1,n+1)]
-
 nueva_lista= [0]*n
 i = 0
 while i < n:
