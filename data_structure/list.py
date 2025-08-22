@@ -12,3 +12,14 @@ print(ejem1)
 
 ejem2 = [1,2,3,4,5]
 print(ejem2.index(2)) #devuelve el primer indice donde aparcere el valor señalado
+
+
+
+nums = [1,2,3,4,5,6,7,8,9,10]
+cuadrado = list(map(lambda x: x*x, nums))
+
+
+print(list(range(10))) #del 0 al 9 dentro de una lista 
+
+lista_cuadrados = [i**2 for i in range(10)]
+print(lista_cuadrados)
