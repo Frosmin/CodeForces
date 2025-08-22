@@ -15,13 +15,15 @@
 
 
 n = int(input())
-amigos = list(map(int,input().split()[:n]))
+posiciciones = list(map(int,input().split()[:n]))
 
-nueva_lista = [0]*4
+# nueva_lista = [i for i in range(1,n+1)]
 
-for i in range(n):
-    indice = amigos.index(amigos[i])
-    print(indice)
+nueva_lista= [0]*n
+i = 0
+while i < n:
+    posicion = (posiciciones[i])-1
+    nueva_lista[posicion] = i+1
+    i+=1
 
-
-print(nueva_lista)
+print(" ".join(map(str,nueva_lista)))
