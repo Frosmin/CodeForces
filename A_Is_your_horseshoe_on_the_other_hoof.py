@@ -34,3 +34,12 @@ if tam == 4 :
     print(0)
 else:
     print(4-tam)
+
+
+
+
+
+lista = list(map(int, input().split()[:4]))
+numeros_unicos = set(lista)
+cantidad_unicos = len(numeros_unicos)
+print(4 - cantidad_unicos)
