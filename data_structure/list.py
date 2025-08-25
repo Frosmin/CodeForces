@@ -33,14 +33,20 @@ print(nueva_lista)
 
 
 # El usuario introduce los números, por ejemplo: 10 20 10 30
-lista = list(map(int, input().split()[:4]))
+la = [1,2,3,4]
 
 # 1. Convertimos la lista a un set para obtener solo los elementos únicos
 # Para la lista [10, 20, 10, 30], el set será {10, 20, 30}
-numeros_unicos = set(lista)
+numeros_unicos = set(la)
 
 # 2. Calculamos la cantidad de números únicos
 cantidad_unicos = len(numeros_unicos)
 
 # 3. Imprimimos el resultado final
 print(4 - cantidad_unicos)
+
+
+a = [1,2,3,2,1,2,1,2,1,9]
+print(a)
+new_a = set(a)
+print(new_a)
