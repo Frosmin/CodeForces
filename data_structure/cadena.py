@@ -17,3 +17,32 @@ print(positions)  # [1]
 # Si prefieres posiciones 1-based:
 positions_1_based = [i+1 for i in positions]
 print(positions_1_based)  # [2]
+
+
+
+
+
+a = set("HQ9S")       # {'H','Q','9'}
+b = set("SAMUEL")    # {'S','A','M','U','E','L'}
+
+print(bool(a & b))         # intersección: conjunto de caracteres comunes -> set() o {'A'} si A está en ambos
+print("H" in a)      # True
+
+print(a in b)
+
+
+# ejemplo: tus sets
+a = set("HQ9S")
+b = set("SAMUEL")
+
+# 1) ¿hay algún carácter común? (lo que quieres normalmente)
+print(bool(a & b))      # True si intersección no vacía
+
+# 2) ¿todos los caracteres de a están en b? (subconjunto)
+print(a <= b)           # True si a es subconjunto de b
+
+# 3) si realmente necesitas usar membership con un conjunto como elemento,
+#    convierte a en frozenset (hashable) y haz que b contenga ese frozenset
+af = frozenset(a)
+B = {af}
+print(af in B)          # True
