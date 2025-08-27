@@ -50,3 +50,9 @@ a = [1,2,3,2,1,2,1,2,1,9]
 print(a)
 new_a = set(a)
 print(new_a)
+
+
+l1 = [1,2,3,4,5]
+l2 = [5,4,3,2,1]
+new_l = list(zip(l1,l2))
+print(new_l)
