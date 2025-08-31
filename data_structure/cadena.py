@@ -46,3 +46,10 @@ print(a <= b)           # True si a es subconjunto de b
 af = frozenset(a)
 B = {af}
 print(af in B)          # True
+
+
+
+
+# para unir una lista
+lista = [1,2,3]
+print(" ".join(map(str, lista)))
