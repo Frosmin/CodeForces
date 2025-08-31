@@ -56,3 +56,10 @@ l1 = [1,2,3,4,5]
 l2 = [5,4,3,2,1]
 new_l = list(zip(l1,l2))
 print(new_l)
+
+
+
+a = [1, 4, 3, 4, 1]
+
+# Encuentra el elemento con más repeticiones
+mas_comun = max(a, key=a.count)
