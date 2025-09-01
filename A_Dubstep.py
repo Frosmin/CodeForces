@@ -21,3 +21,9 @@ while i < len(cancion):
 
     
 print("".join(map(str,lst)))
+
+
+            
+
+
+print(" ".join(filter(None, input().split("WUB"))))
