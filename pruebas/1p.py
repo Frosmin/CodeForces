@@ -16,8 +16,14 @@
 
 
 
-a = set("HQ9S")       # {'H','Q','9'}
-b = set("SAMUEL")    # {'S','A','M','U','E','L'}
+# a = set("HQ9S")       # {'H','Q','9'}
+# b = set("SAMUEL")    # {'S','A','M','U','E','L'}
 
-print(bool(a & b))         # intersección: conjunto de caracteres comunes -> set() o {'A'} si A está en ambos
-print("H" in a)      # True
+# print(bool(a & b))         # intersección: conjunto de caracteres comunes -> set() o {'A'} si A está en ambos
+# print("H" in a)      # True
+
+
+
+lst = list(map(int,input().rstrip().split()))
+
+print(lst)
