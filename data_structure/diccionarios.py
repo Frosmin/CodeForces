@@ -1,38 +1,38 @@
-# # Creas un diccionario vacío
-# mi_diccionario = {1: 2}
+# Creas un diccionario vacío
+mi_diccionario = {1: 2}
 
 
-# mi_diccionario = {}
+mi_diccionario = {}
 
-# # Añades el par clave-valor
-# mi_diccionario[1] = 2
+# Añades el par clave-valor
+mi_diccionario[1] = 2
 
-# print(mi_diccionario)
-# # Salida: {1: 2}
-
-
+print(mi_diccionario)
+# Salida: {1: 2}
 
 
 
-# # Ejemplo: Un diccionario de calificaciones
-# calificaciones = {
-#     "Ana": 10,
-#     "Juan": 8,
-#     "Sofia": 10,
-#     "Luis": 7
-# }
 
-# # Comprobar si el valor 8 existe en el diccionario
-# if 8 in calificaciones.values():
-#     print("Sí, alguien obtuvo una calificación de 8.")
-# else:
-#     print("No, nadie obtuvo una calificación de 8.")
 
-# # Comprobar si el valor 5 existe
-# if 5 in calificaciones.values():
-#     print("Sí, alguien obtuvo una calificación de 5.")
-# else:
-#     print("No, nadie obtuvo una calificación de 5.")
+# Ejemplo: Un diccionario de calificaciones
+calificaciones = {
+    "Ana": 10,
+    "Juan": 8,
+    "Sofia": 10,
+    "Luis": 7
+}
+
+# Comprobar si el valor 8 existe en el diccionario
+if 8 in calificaciones.values():
+    print("Sí, alguien obtuvo una calificación de 8.")
+else:
+    print("No, nadie obtuvo una calificación de 8.")
+
+# Comprobar si el valor 5 existe
+if 5 in calificaciones.values():
+    print("Sí, alguien obtuvo una calificación de 5.")
+else:
+    print("No, nadie obtuvo una calificación de 5.")
     
     
     
