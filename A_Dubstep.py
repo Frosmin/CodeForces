@@ -24,6 +24,6 @@ print("".join(map(str,lst)))
 
 
             
-
+print(" ".join(input().split("WUB")).strip())
 
 print(" ".join(filter(None, input().split("WUB"))))
