@@ -53,3 +53,7 @@ print(af in B)          # True
 # para unir una lista
 lista = [1,2,3]
 print(" ".join(map(str, lista)))
+
+
+
+print(" ".join(input().split("WUB")).strip())
