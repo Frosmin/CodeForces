@@ -17,6 +17,5 @@ for item in mescla:
     else:
         dic2[item] = 1
         
-print(dic1)
 
 print("YES" if dic1 == dic2 else "NO")
