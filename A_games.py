@@ -9,7 +9,7 @@ for i in range(n):
              item+=1
         else:
              item = 0
-print(sum(dic.values())
+print(sum(dic.values()))
            
            
    
