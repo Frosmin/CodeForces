@@ -57,3 +57,8 @@ print(" ".join(map(str, lista)))
 
 
 print(" ".join(input().split("WUB")).strip())
+
+
+s = "0000"
+resultado = "1".join(s)
+print(resultado)  # Salida: 0 1 0 1 0 1 0

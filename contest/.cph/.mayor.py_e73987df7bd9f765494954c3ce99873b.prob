@@ -1,0 +1,1 @@
+{"name":"Local: mayor","url":"d:\\umss\\CodeForces\\contest\\mayor.py","tests":[{"id":1757072201025,"input":"3\n10 20\n20 10\n10 10","output":"<\n>\n="}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\umss\\CodeForces\\contest\\mayor.py","group":"local","local":true}
