@@ -24,6 +24,9 @@
 
 
 
-lst = list(map(int,input().rstrip().split()))
+# lst = list(map(int,input().rstrip().split()))
 
-print(lst)
+# print(lst)
+
+num = 122
+print(num%10)
