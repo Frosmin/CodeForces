@@ -18,4 +18,13 @@ for k, v in dic1.items():
         res += dic2[k]*v
 print(res)
 
+    # key value
+dic = {1: 10,
+       2: 20,
+       3: 30}
+
+#para acceder a un valor 
+dic[3]   #esto accede a 30
+print(dic.get(3))
+
 
