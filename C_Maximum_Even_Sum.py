@@ -1,9 +1,12 @@
+import math
+
 def divi(b):
-    lst =[]
-    for i in range(1,b+1):
-        if b % i ==0:
-            lst.append(i)    
-    return lst
+    lst = set()
+    for i in range(1, int(math.sqrt(b)) + 1):
+        if b % i == 0:
+            lst.add(i)
+            lst.add(b // i)
+    return list(lst)
 
 
 n = int(input())

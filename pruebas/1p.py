@@ -30,3 +30,4 @@
 
 num = 122
 print(num%10)
+
