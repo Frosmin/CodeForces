@@ -1,23 +1,14 @@
 n = int(input())
-lst = list(map(int,input().split()[:n]))
-# maxi = 0
-# res = 0
-# ant = 0
-# for i in range(n):
-#     if lst[i] >= ant:
-#         ant = lst[i]
-#         res+=1
-#     else:
-#         if maxi < res:
-#             ant  = lst[i]
-#             maxi = res
-#             res = 1
-# if maxi < res:
-#             maxi = res
-#             res = 0 
-# print(maxi)
-
-for i in range(n-1):
-    
+lst = list(map(int, input().split()[:n]))
+max_len = 1
+actual_len = 1
+for i in range(n - 1):
+    if lst[i] <= lst[i+1]:
+        actual_len += 1
+    else:
+        max_len = max(max_len, actual_len)
+        actual_len = 1
+        
+print(max(max_len, actual_len)) 
     
     

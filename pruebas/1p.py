@@ -28,6 +28,8 @@
 
 # print(lst)
 
-num = 122
-print(num%10)
+# num = 122
+# print(num%10)
 
+for i in range(3-1):
+    print(i)

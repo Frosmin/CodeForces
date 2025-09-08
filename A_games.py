@@ -1,12 +1,21 @@
 n = int(input())
-dic = {}
-for i in range(n):
+dic1 = {}
+dic2 = {}
+res = 0
+for _ in range(n):
     a,b = map(int,input().split())
-    for item in dic:
-        # if item == a:
-        #    item+=1
-        # elif item == b:
-        #      item+=1
-        # else:
-        #      dic[item] = 0
-print(dic)
+    if a in dic1:
+        dic1[a] +=1
+    else:
+        dic1[a] = 1
+    if b in dic2:
+        dic2[b] +=1
+    else:
+        dic2[b] =1
+key = 0 
+for k, v in dic1.items():
+    if k in dic2:
+        res += dic2[k]*v
+print(res)
+
+
