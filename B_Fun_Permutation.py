@@ -12,7 +12,7 @@ for _ in range(t):
     lst = list(map(int, input().split()[:n]))
     for i in range(n):
         new.append(n-lst[i]+1)
-    print(" ".join(map(str,new)))
+    print(*new)
     
 
     
