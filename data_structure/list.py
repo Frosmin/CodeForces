@@ -63,3 +63,6 @@ a = [1, 4, 3, 4, 1]
 
 # Encuentra el elemento con más repeticiones
 mas_comun = max(a, key=a.count)
+
+# para imprimir toda la lista sin usar join con salto 1 4 3 4 1
+print(*a)
