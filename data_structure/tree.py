@@ -12,6 +12,15 @@ def bfs(inicio, grafo, n):
             if not visitado[vecino]:
                 cola.append(vecino)
                 visitado[vecino] = True
+                
+                
+def dfs(nodo,visitados, grafo):
+    
+    visitado[nodo] = True
+    print(nodo, end=" ")
+    for vecino in grafo[nodo]:
+        if not visitado[vecino]:
+            dfs(vecino,visitado, grafo)
 
 
 
@@ -31,7 +40,6 @@ grafo = [[] for _ in range(n + 1)]
 for u, v in aristas:
     grafo[u].append(v)
     grafo[v].append(u)  # porque es no dirigido
-print(grafo)
 
 # # Imprimimos la lista de adyacencia
 # print(grafo)
@@ -39,7 +47,11 @@ print(grafo)
 #     print(i, "->", grafo[i])
 
 
+visitado  = [False] * (n+1)
+dfs(1,visitado,grafo)
 
-# for vecinos in grafo[2]:
-#     print(vecinos)
+print(" ")
+print("---------")
+
 bfs(1,grafo,n)
+
