@@ -19,7 +19,10 @@ if paridad_lista(lista) == True: #mas pares
         if paridad(lista[i]) == False:
             print(i+1)
 else:
-    # mas impares
+    # mas imparesa
     for i in range(n):
         if paridad(lista[i]) == True:
             print(i+1)
+
+
+            
