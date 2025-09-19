@@ -1,23 +1,48 @@
-import collections
+# from collections import deque
 
+# t = int(input())
+# lst = list(map(int,input().split()[:t]))
+# n = int(input())
+# cola = deque()
+# res = []
+
+# for i , item in enumerate(lst):
+
+    
+#     while cola and lst[cola[-1]] <= item:
+#         cola.pop()
+#     cola.append(i)
+
+#     if cola[0] <= i-n:
+#         cola.popleft()
+
+#     if i >= n-1:
+#         res.append(lst[cola[0]])
+# print(*res)
+
+
+
+
+from collections import deque
 
 n = int(input())
-arr = list(map(int, input().split()[:n]))
+lst = list(map(int,input().split()[:n]))
 k = int(input())
+cola = deque()
 
-dq = collections.deque()
-result = []
 
 for i in range(n):
-    if dq and dq[0] == i - k:
-        dq.popleft()
-        
-    while dq and arr[dq[-1]] < arr[i]:
-        dq.pop()
-        
-    dq.append(i)
+    if cola and cola[0] <= i - k:
+        cola.popleft()
     
-    if i >= k - 1:
-        result.append(str(arr[dq[0]]))
-        
-print(" ".join(result))
+    while cola and lst[cola[-1]] <= lst[i]:
+        cola.pop()
+    cola.append(i)
+
+    if i >= k -1:
+        print(lst[cola[0]], end=" ")
+
+
+
+
+
