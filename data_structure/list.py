@@ -66,3 +66,8 @@ mas_comun = max(a, key=a.count)
 
 # para imprimir toda la lista sin usar join con salto 1 4 3 4 1
 print(*a)
+
+
+
+# ordenar una lista 
+l1.sort()
