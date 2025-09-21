@@ -29,18 +29,50 @@ n = int(input())
 lst = list(map(int,input().split()[:n]))
 k = int(input())
 cola = deque()
-
+mayor = 0
 
 for i in range(n):
-    if cola and cola[0] <= i - k:
-        cola.popleft()
-    
-    while cola and lst[cola[-1]] <= lst[i]:
-        cola.pop()
-    cola.append(i)
 
-    if i >= k -1:
-        print(lst[cola[0]], end=" ")
+    if i >= k:
+            print(max(cola), end=" ")
+
+
+    if len(cola) == k:
+          cola.popleft()
+    cola.append(lst[i])
+
+
+print(max(cola))
+
+
+
+
+
+
+
+n = int(input())
+lst = list(map(int,input().split()[:n]))
+k = int(input())
+mayor = 0
+
+for i in range(0, n - k + 1):
+        mayor = 0
+        for j in range(i, i + k):
+            if lst[j] > mayor:
+                mayor = lst[j]
+        print(mayor, end=" ")
+
+
+# for i in range(n):
+#     if cola and cola[0] <= i - k:
+#         cola.popleft()
+    
+#     while cola and lst[cola[-1]] <= lst[i]:
+#         cola.pop()
+#     cola.append(i)
+
+#     if i >= k -1:
+#         print(lst[cola[0]], end=" ")
 
 
 
