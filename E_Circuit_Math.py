@@ -1,36 +1,40 @@
 import sys
+from collections import deque
 
+n = int(sys.stdin.readline())  
 
-
-n_str = sys.stdin.readline()
-n = int(n_str)
-
-
-values_str = sys.stdin.readline().split()
+valores_cadena = sys.stdin.readline().split()  
 variables = {}
+
 for i in range(n):
-    char_code = ord('A') + i
-    variable_char = chr(char_code)
-    variables[variable_char] = (values_str[i] == 'T')
-expression = sys.stdin.readline().split()
-stack = []
-for token in expression:
+    codigo_caracter = ord('A') + i  
+    caracter_variable = chr(codigo_caracter)  
+    variables[caracter_variable] = (valores_cadena[i] == 'T')
+
+
+
+    
+expresion = sys.stdin.readline().split()  
+pila =  deque()
+for token in expresion:
     if 'A' <= token <= 'Z':
-        stack.append(variables[token])
+        pila.append(variables[token])
     else:
         if token == '*':  
-            op2 = stack.pop()
-            op1 = stack.pop()
-            stack.append(op1 and op2)
+            op2 = pila.pop()  
+            op1 = pila.pop()  
+            pila.append(op1 and op2)
         elif token == '+':  
-            op2 = stack.pop()
-            op1 = stack.pop()
-            stack.append(op1 or op2)
+            op2 = pila.pop()
+            op1 = pila.pop()
+            pila.append(op1 or op2)
         elif token == '-':  
-            op1 = stack.pop()
-            stack.append(not op1)
-result = stack[0]
-if result:
+            op1 = pila.pop()
+            pila.append(not op1)
+
+
+resultado = pila[0]  
+if resultado:
     print('T')
 else:
     print('F')
