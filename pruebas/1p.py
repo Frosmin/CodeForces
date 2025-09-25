@@ -31,5 +31,12 @@
 # num = 122
 # print(num%10)
 
-for i in range(3-1):
+# for i in range(3-1):
+#     print(i)
+i =0
+while True:
+    if i == 5:
+        print("final")
+        break
     print(i)
+    i+=1
