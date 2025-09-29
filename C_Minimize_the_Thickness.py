@@ -9,14 +9,13 @@
 
 
 
-
-t = int(input())
  
-for _ in range(t):
+for _ in range(int(input())):
     n = int(input())
     arr = list(map(int, input().split()[:n]))
  
-    s, total = 0, len(arr)
+    s, total = 0, n
+    
     for i in range(n):
         s += arr[i]
         q = 0
