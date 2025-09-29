@@ -5,7 +5,7 @@
 
 
 
-def res():
+def respuesta():
     n = int(input())
     permutacion = list(map(int, input().split()[:n]))
 
@@ -43,7 +43,7 @@ def res():
 
 
 for _ in range(int(input())):
-    res()
+    respuesta()
 
 
 # import math
