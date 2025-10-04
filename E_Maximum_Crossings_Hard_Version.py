@@ -20,9 +20,9 @@ for _ in range(int(input())):
 def merge(array, left, right):
  
     if(right > left):
-        metade = (right + left) //2
-        temp1 = array[left:metade+1]
-        temp2 = array[metade+1:right +1]
+        medio = (right + left) //2
+        temp1 = array[left:medio+1]
+        temp2 = array[medio+1:right +1]
  
 
         
@@ -36,7 +36,7 @@ def merge(array, left, right):
             if(temp2[k] <= temp1[j]):
                 array[i] = temp2[k]
                 if(temp1[j] != 10**6):
-                    contador = contador + (metade - left - j) + 1
+                    contador = contador + (medio - left - j) + 1
                 k = k + 1
  
             else:
@@ -52,22 +52,22 @@ def merge(array, left, right):
  
 def merge_sorte(array, left, right):
     if(right > left):
-        metade = (right + left) //2
-        esquerda = merge_sorte(array, left, metade)
-        direita = merge_sorte(array, metade +1, right)
+        medio = (right + left) //2
+        izq = merge_sorte(array, left, medio)
+        der = merge_sorte(array, medio +1, right)
         merge_c = merge(array, left, right)
  
  
-        return esquerda + direita + merge_c
+        return izq + der + merge_c
  
     else:
         return 0
     
  
  
-testes = int(input())
+
  
-for _ in range(testes):
+for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
     print(merge_sorte(a, 0, n-1))
