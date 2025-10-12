@@ -1,9 +1,6 @@
 h,e = map(int,input().split())
-hoteles = list(map(int,input().split()))
-elencos = list(map(int,input().split()))
-
-e = len(elencos)
-h = len(hoteles)
+hoteles = list(map(int,input().split()[:h]))
+elencos = list(map(int,input().split()[:e]))
 
 lista_res = []
 
