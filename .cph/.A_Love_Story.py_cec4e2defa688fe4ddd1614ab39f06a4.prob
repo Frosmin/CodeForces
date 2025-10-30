@@ -1,0 +1,1 @@
+{"name":"Local: A_Love_Story","url":"d:\\umss\\algoritmos\\CodeForces\\A_Love_Story.py","tests":[{"id":1761784309793,"input":"5\ncoolforsez\ncadafurcie\ncodeforces\npaiuforces\nforcescode\n","output":"4\n5\n0\n4\n9\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\umss\\algoritmos\\CodeForces\\A_Love_Story.py","group":"local","local":true}
