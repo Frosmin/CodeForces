@@ -1,0 +1,1 @@
+{"name":"Local: comidas","url":"d:\\umss\\algoritmos\\CodeForces\\segundoParcial\\comidas.cpp","tests":[{"id":1763145690392,"input":"4 3\n2 2 1\n1 1\n1 3\n2 3 1\n1 3","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\umss\\algoritmos\\CodeForces\\segundoParcial\\comidas.cpp","group":"local","local":true}
