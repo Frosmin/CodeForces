@@ -1,0 +1,1 @@
+{"name":"Local: platos","url":"/home/simon/data/umss/algoritmos/CodeForces/segundoParcial/platos.py","tests":[{"id":1763032574315,"input":"3 4\n2 2 1\n1 1\n1 3\n2 3 1\n1 3","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/simon/data/umss/algoritmos/CodeForces/segundoParcial/platos.py","group":"local","local":true}
