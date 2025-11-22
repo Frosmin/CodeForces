@@ -11,14 +11,14 @@ for _ in range(int(input())):
             dict[i].add(s[i])
 
 
-res = []
+res2 = []
 for i in range(m):
     if i in dict:
         l = list(dict[i])
         if len(l) == 1:
-            res.append(l[0])
+            res2.append(l[0])
         else:
-            res.append('?') 
+            res2.append('?') 
     else:
-        res.append('a')
-print(*res,sep='')
+        res2.append('a')
+print(*res2,sep='')
