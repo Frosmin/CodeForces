@@ -1,5 +1,6 @@
 
 
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -74,7 +75,9 @@ int main() {
     int numPlatos, numClientes;
     if(!(cin >> numPlatos >> numClientes)) return 0;
     vector<int> cantidadPlatos(numPlatos+1);
-    for(int i=1;i<=numPlatos;++i) cin >> cantidadPlatos[i];
+
+    for(int i=1;i<=numPlatos;++i) 
+    {cin >> cantidadPlatos[i];}
 
     int fuente = 0;
     int sumidero = numPlatos + numClientes + 1;
@@ -85,7 +88,7 @@ int main() {
     for(int j=1;j<=numClientes;++j) {
         int k; cin >> k;
         int nodoCliente = numPlatos + j;
-        for(int t=0;t<k;++t) {
+        for(int t=0; t<k ;++t) {
             int plato; cin >> plato; 
             if(plato >=1 && plato <= numPlatos) {
                 dinic.agregarArista(plato, nodoCliente, 1);
