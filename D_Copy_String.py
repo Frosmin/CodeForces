@@ -13,20 +13,20 @@ for _ in range(t):
         continue
     
     pos = n-1
-    stps = []
+    pasos = []
     for i in range(n-1, -1, -1):
         for j in range(min(pos, i), -1, -1):
             if t[i] == s[j]:
-                stps.append(i-j)
+                pasos.append(i-j)
                 pos = j
                 break
  
-    if len(stps) < n:
+    if len(pasos) < n:
         print(-1)
         continue
     
-    stps.reverse()
-    mx = max(stps)
+    pasos.reverse()
+    mx = max(pasos)
     if mx > maximo:
         print(-1)
         continue
@@ -35,7 +35,7 @@ for _ in range(t):
     for i in range(1, mx+1):
         sdash = [s[0]]
         for j in range(1, n):
-            if stps[j] >= i:
+            if pasos[j] >= i:
                 sdash.append(s[j-1])
             else:
                 sdash.append(s[j])
