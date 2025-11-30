@@ -77,14 +77,14 @@ int indices_inicio[MAXN], longitud[MAXN];
 char cadena_concatenada[MAXL]; 
 int pertenece_a[MAXL];         
 int visitado[MAXN]={0};        
-int resultados_temp[2][MAXL]={0}, tamano_res[2]={0}; 
+int resultados_temp[2][MAXL]={0}, tamanio_res[2]={0}; 
 
 
-int verificar(int *lista_resultados, int &tamano, int len) {
+int verificar(int *lista_resultados, int &tamanio, int len) {
     memset(visitado, 0, sizeof(visitado));
     int grupo_actual = 1;
     int total_encontrados = 1;
-    tamano = 0;
+    tamanio = 0;
 
     visitado[pertenece_a[arr_sufijos[1]]] = grupo_actual;
 
@@ -99,7 +99,7 @@ int verificar(int *lista_resultados, int &tamano, int len) {
         } else {
             
             if (total_encontrados > n / 2) {
-                lista_resultados[++tamano] = arr_sufijos[i-1];
+                lista_resultados[++tamanio] = arr_sufijos[i-1];
             }
            
             total_encontrados = 1;
@@ -109,10 +109,10 @@ int verificar(int *lista_resultados, int &tamano, int len) {
     }
    
     if (total_encontrados > n / 2) {
-        lista_resultados[++tamano] = arr_sufijos[indices_inicio[n+1]-1]; 
+        lista_resultados[++tamanio] = arr_sufijos[indices_inicio[n+1]-1]; 
         
     }
-    return tamano;
+    return tamanio;
 }
 
 char separadores[MAXN]; 
@@ -151,7 +151,7 @@ int main() {
         
         while (izq <= der) {
             int medio = (izq + der) >> 1;
-            if (verificar(resultados_temp[puntero], tamano_res[puntero], medio)) {
+            if (verificar(resultados_temp[puntero], tamanio_res[puntero], medio)) {
                 mejor_longitud = medio;
                 izq = medio + 1;
                 puntero ^= 1; 
@@ -164,7 +164,7 @@ int main() {
             puts("?");
         } else {
             puntero ^= 1; 
-            Para(i, tamano_res[puntero]) {
+            Para(i, tamanio_res[puntero]) {
                 
                 ParaK(k, resultados_temp[puntero][i], resultados_temp[puntero][i] + mejor_longitud - 1) 
                     cout << cadena_concatenada[k];
