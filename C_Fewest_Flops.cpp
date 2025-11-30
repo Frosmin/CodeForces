@@ -55,7 +55,7 @@ vector<vector<int>> memoria;
 
 vector<vector<int>> bloques; 
 
-int resolver(int indice, int ultimo_caracter_previo) {
+int res(int indice, int ultimo_caracter_previo) {
   
     if (indice == n) return 0;
     
@@ -74,7 +74,7 @@ int resolver(int indice, int ultimo_caracter_previo) {
         }
     }
      for (int nuevo_ultimo : bloques[indice]) {
-        int costo_actual = resolver(indice + 1, nuevo_ultimo) + num_unicos;
+        int costo_actual = res(indice + 1, nuevo_ultimo) + num_unicos;
         
       
         
@@ -124,7 +124,7 @@ int main() {
         }
 
      
-        cout << resolver(0, 26) << "\n";
+        cout << res(0, 26) << "\n";
     }
     return 0;
 }
