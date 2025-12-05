@@ -7,7 +7,7 @@ for i in range(n):
 t = input()
  
  
-index = 0
+ind2 = 0
  
 res = []
  
@@ -23,13 +23,13 @@ for c in t:
     if len(activos) == 0:
         break
     sarr = activos
-    res.append(t[index])
-    index += 1
-    if index == len(t):
+    res.append(t[ind2])
+    ind2 += 1
+    if ind2 == len(t):
         break
  
  
-if index == len(t):
+if ind2 == len(t):
     print("NO")
 else:
     print("YES")
